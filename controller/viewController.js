@@ -1,4 +1,5 @@
 // import { User } from "../model/userModel";
+//
 
 exports.getMainLayout = (req, res) => {
   res.status(200).render("base");
