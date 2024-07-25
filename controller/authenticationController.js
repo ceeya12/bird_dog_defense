@@ -1,3 +1,4 @@
+//Test Information
 const Email = require("../utilities/email");
 const User = require("../model/userModel");
 const jwt = require("jsonwebtoken");
