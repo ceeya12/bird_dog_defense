@@ -1,0 +1,149 @@
+//
+// forms
+//
+
+.form-switch {
+  .form-check-input {
+    border-radius: remAdjust(100);
+  }
+}
+
+// form switch right
+.form-switch-right {
+  position: relative;
+  width: 100%;
+  margin: 0;
+  padding-left: 0;
+  padding-right: remAdjust(56);
+
+  &:hover {
+    .form-check-label {
+      opacity: 0.75;
+    }
+  }
+
+  .form-check-label {
+    @include transition;
+    width: 100%;
+    opacity: 0.5;
+    cursor: pointer;
+  }
+
+  .form-check-input {
+    position: absolute;
+    right: 0;
+    cursor: pointer;
+  }
+
+  .form-check-input:checked ~ .form-check-label {
+    opacity: 1;
+  }
+}
+
+// minimal checkbox
+.form-check-minimal {
+  padding: 0;
+
+  .form-check-input {
+    display: none;
+  }
+
+  .form-check-input:checked ~ .form-check-label {
+    padding-left: remAdjust(8);
+    padding-right: remAdjust(40);
+    border-color: $border-color;
+
+    &::before {
+      opacity: 1;
+    }
+  }
+
+  .form-check-label {
+    display: inline-flex;
+    position: relative;
+    transition: all 0.2s;
+    cursor: pointer;
+    padding: remAdjust(4) remAdjust(8) remAdjust(4) 0;
+    line-height: remAdjust(24);
+    border: $border-width solid transparent;
+
+    &::before {
+      transition: all 0.2s;
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: remAdjust(32);
+      height: remAdjust(32);
+      line-height: remAdjust(32);
+      font-family: bootstrap-icons !important;
+      font-size: $font-size-base;
+      text-align: center;
+      content: "\f62a";
+      background: $border-color;
+      opacity: 0;
+    }
+
+    &:hover {
+      color: $primary;
+    }
+  }
+}
+
+// color checkbox
+.form-check-color {
+  padding: 0;
+
+  .form-check-input {
+    display: none;
+  }
+
+  .form-check-input:checked ~ .form-check-label {
+    padding-left: remAdjust(8);
+    padding-right: remAdjust(40);
+    border-color: $border-color;
+
+    &::before {
+      opacity: 1;
+    }
+  }
+
+  .form-check-label {
+    display: inline-flex;
+    align-items: center;
+    position: relative;
+    transition: all 0.2s;
+    cursor: pointer;
+    padding: remAdjust(4) remAdjust(8) remAdjust(4) 0;
+    line-height: remAdjust(24);
+    border: $border-width solid transparent;
+
+    &::before {
+      transition: all 0.2s;
+      position: absolute;
+      top: 0;
+      right: 0;
+      content: "";
+      width: remAdjust(32);
+      height: remAdjust(32);
+      line-height: remAdjust(32);
+      font-family: bootstrap-icons !important;
+      font-size: $font-size-base;
+      text-align: center;
+      content: "\f62a";
+      background: $border-color;
+      opacity: 0;
+    }
+
+    &:hover {
+      color: $primary;
+    }
+
+    span {
+      display: inline-flex;
+      width: remAdjust(16);
+      height: remAdjust(16);
+      margin-right: remAdjust(8);
+      border-radius: 50%;
+    }
+  }
+}

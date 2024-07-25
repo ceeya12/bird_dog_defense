@@ -1,0 +1,168 @@
+//
+// dropdowns
+//
+
+.dropdown {
+  @include nofocus;
+
+  > a {
+    @include nofocus;
+  }
+}
+
+.dropdown-menu {
+  box-shadow: 0 0 remAdjust(24) 0 rgba($black, 0.1);
+  padding: remAdjust(24) remAdjust(16);
+  border: 0;
+
+  .dropdown-item {
+    @include nofocus;
+    background: transparent;
+    position: relative;
+    padding: remAdjust(4) remAdjust(16);
+    font-size: $font-size-sm;
+    color: $secondary;
+
+    &:hover,
+    &:active {
+      padding-left: remAdjust(12);
+      padding-right: remAdjust(20);
+      background: transparent;
+      color: $black;
+    }
+
+    &.active {
+      color: $primary;
+      background: transparent;
+
+      &:hover,
+      &:active {
+        padding-left: remAdjust(16);
+        padding-right: remAdjust(16);
+      }
+    }
+
+    span {
+      display: block;
+    }
+  }
+
+  .dropdown-label {
+    @include nofocus;
+    display: inline-block;
+    background: transparent;
+    position: relative;
+    padding: remAdjust(4) remAdjust(16);
+    font-size: $font-size-sm;
+
+    &:not(:first-child) {
+      margin-top: remAdjust(16);
+    }
+  }
+}
+
+.dropdown-menu-detailed {
+  li + li {
+    margin-top: remAdjust(8);
+  }
+
+  li span {
+    position: relative;
+    padding-left: remAdjust(40);
+
+    .bi {
+      position: absolute;
+      top: 50%;
+      left: 0;
+      margin-top: -0.5em;
+      font-size: remAdjust(24);
+      color: $black;
+    }
+
+    small {
+      display: block;
+      font-size: $font-size-sm;
+      color: $gray-700;
+    }
+  }
+}
+
+// navbar dropdown
+@include media-breakpoint-up(lg) {
+  .dropdown {
+    .dropdown-menu {
+      @include translate(-50%, 0);
+      left: 50%;
+
+      &[class*="-md"] {
+        min-width: 25vw;
+        column-count: 2;
+      }
+
+      &[class*="-custom"] {
+        min-width: 30vw;
+        padding: 0;
+      }
+    }
+  }
+
+  .dropend {
+    .dropdown-menu {
+      @include translate(0, 0);
+      left: 100%;
+      top: remAdjust(-24);
+    }
+
+    .dropdown-toggle {
+      &::after {
+        position: absolute;
+        top: 50%;
+        right: remAdjust(12);
+        margin-top: -2px;
+        border-width: remAdjust(4) 0 remAdjust(4) remAdjust(4);
+        border-style: solid;
+        color: $gray-400;
+      }
+    }
+  }
+
+  // dropdown hover
+  .dropdown-hover {
+    > .dropdown-menu {
+      transition: all 0.2s ease-in-out;
+      display: block;
+      pointer-events: none;
+      opacity: 0;
+      margin: remAdjust(10) 0 0 0;
+    }
+
+    &:hover > .dropdown-menu {
+      opacity: 1;
+      pointer-events: auto;
+      margin: 0;
+    }
+
+    > .dropdown-toggle {
+      &::after {
+        display: none;
+      }
+    }
+  }
+
+  // dropend hover
+  .dropend-hover {
+    &:hover > .dropdown-menu {
+      opacity: 1;
+      pointer-events: auto;
+      margin: 0;
+    }
+
+    > .dropdown-menu {
+      @include transition;
+      display: block;
+      pointer-events: none;
+      margin: 0 0 0 remAdjust(10);
+      opacity: 0;
+    }
+  }
+}

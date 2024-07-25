@@ -1,0 +1,51 @@
+@use "./components/mixins" as *;
+@use "variables" as *;
+@use "user";
+
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&display=swap");
+
+// bootstrap & variables
+@import "~bootstrap/scss/functions";
+@import "~bootstrap/scss/bootstrap";
+/* Option 2: Import via CSS */
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css");
+
+// @import "utilities";
+@import "libs";
+@import "~bootstrap/scss/variables";
+@import "~bootstrap/scss/mixins";
+@import "~bootstrap/scss/utilities";
+
+// components
+@import "components/nav";
+@import "components/buttons";
+@import "components/modal";
+@import "components/misc";
+@import "components/accordions";
+@import "components/dropdowns";
+@import "components/icons";
+@import "components/sizing";
+@import "components/tables";
+@import "components/range-slider";
+@import "components/shop";
+@import "components/alert";
+@import "components/users";
+@import "components/cards";
+@import "components/pagination";
+@import "components/forms";
+@import "components/video";
+@import "components/inverted";
+@import "components/widgets";
+@import "components/typed";
+@import "components/testimonials";
+@import "components/badge";
+@import "components/breadcrumb";
+@import "components/input-group";
+@import "components/tiny-slider";
+@import "components/figure";
+@import "components/offcanvas";
+@import "components/list-groups";
+@import "components/typography";
+@import "components/progress";
+@import "components/navbar";
+@import "components/code";

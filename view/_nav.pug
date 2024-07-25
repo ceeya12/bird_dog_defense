@@ -1,0 +1,189 @@
+nav#mainNav.navbar.navbar-expand-lg.navbar-sticky.navbar-dark
+  .container
+    a.navbar-brand(href='/')
+      img(src='./img/fulllogo_320x256.png' alt='Logo')
+    // secondary
+    ul.navbar-nav.navbar-nav-secondary.order-lg-3
+      li.nav-item.d-lg-none
+        a.nav-link.nav-icon(href='' role='button' data-bs-toggle='collapse' data-bs-target='#navbar' aria-controls='navbar' aria-expanded='false' aria-label='Toggle navigation')
+          span.bi.bi-list
+      li.nav-item.d-none.d-lg-block
+        a#emailRegister.btn.btn-outline-white.rounded-pill.ms-2(href='#') 
+          | Register
+      li.nav-item.d-none.d-lg-block
+        a#signIn.btn.btn-outline-white.rounded-pill.ms-2(href='#') Sign in
+    // primary
+    #navbar.collapse.navbar-collapse(data-bs-parent='#mainNav')
+      ul.navbar-nav
+        li.nav-item.dropdown.dropdown-hover
+          a#navbarDropdown-1.nav-link.dropdown-toggle(href='#' role='button' data-bs-toggle='dropdown' aria-expanded='false')
+            | Landings
+          ul.dropdown-menu.dropdown-menu-md(aria-labelledby='navbarDropdown-1')
+            li
+              a.dropdown-item(href='./startup.html') Startup
+            li
+              a.dropdown-item(href='./saas.html') Saas
+            li
+              a.dropdown-item(href='./coworking.html') Coworking
+            li
+              a.dropdown-item(href='./job-board.html') Job Board
+            li
+              a.dropdown-item(href='./agency.html') Agency
+            li
+              a.dropdown-item(href='./blog.html') Blog
+            li
+              a.dropdown-item(href='./product.html') Product
+            li
+              a.dropdown-item.active(href='./app.html') App
+            li
+              a.dropdown-item(href='./shop.html') Shop
+            li
+              a.dropdown-item(href='./event.html') Event
+            li
+              a.dropdown-item(href='./course.html') Course
+            li
+              a.dropdown-item(href='./service.html') Service
+            li
+              a.dropdown-item(href='./software.html') Software
+            li
+              a.dropdown-item(href='./documentation.html') Documentation
+        li.nav-item.dropdown.dropdown-hover
+          a#navbarDropdown-2.nav-link.dropdown-toggle(href='#' role='button' data-bs-toggle='dropdown' aria-expanded='false')
+            | Pages
+          .dropdown-menu.dropdown-menu-custom(aria-labelledby='navbarDropdown-2')
+            .row.g-0
+              .col-6
+                .p-4
+                  span.dropdown-label Company
+                  a.dropdown-item(href='./about.html') About
+                  a.dropdown-item(href='./pricing.html') Pricing
+                  a.dropdown-item(href='./faq.html') FAQ
+                  a.dropdown-item(href='./terms.html') Terms
+                  a.dropdown-item(href='./services.html') Services
+                  a.dropdown-item(href='./job-listing.html') Job Listing
+                  a.dropdown-item(href='./job-post.html') Job Post
+                  span.dropdown-label Portfolio
+                  a.dropdown-item(href='./portfolio-grid.html') Grid
+                  a.dropdown-item(href='./portfolio-list.html') List
+                  a.dropdown-item(href='./case-study.html') Case Study
+              .col-6
+                .p-4
+                  span.dropdown-label Blog
+                  a.dropdown-item(href='./blog-listing.html') Listing
+                  a.dropdown-item(href='./blog-post.html') Post
+                  span.dropdown-label Contact
+                  a.dropdown-item(href='./contact.html') Classic
+                  a.dropdown-item(href='./contact-location.html') Location
+                  span.dropdown-label Utilities
+                  a.dropdown-item(href='./404.html') 404
+                  a.dropdown-item(href='./coming-soon.html') Coming Soon
+              .col-12
+                a.card.card-arrow.inverted.bg-green(href='')
+                  .card-footer.mt-auto
+                    h4.lead.lh-3.fw-light Buy Cube
+        li.nav-item.dropdown.dropdown-hover
+          a#navbarDropdown-3.nav-link.dropdown-toggle(href='#' role='button' data-bs-toggle='dropdown' aria-expanded='false' data-bs-auto-close='outside')
+            | Account
+          ul.dropdown-menu(aria-labelledby='navbarDropdown-3')
+            li
+              a.dropdown-item(href='./account.html') Dashboard
+            li
+              a.dropdown-item(href='./account-settings.html') Settings
+            li
+              a.dropdown-item(href='./account-orders.html') Orders
+            li
+              a.dropdown-item(href='./account-billing.html') Billing
+            li
+              a.dropdown-item(href='./sign-in.html') Sign in
+            li
+              a.dropdown-item(href='./register.html') Register
+            li
+              a.dropdown-item(href='./forgot-password.html') Forgot Password
+        li.nav-item.dropdown.dropdown-hover
+          a#navbarDropdown-4.nav-link.dropdown-toggle(href='#' role='button' data-bs-toggle='dropdown' aria-expanded='false' data-bs-auto-close='outside')
+            | Purchase
+          ul.dropdown-menu(aria-labelledby='navbarDropdown-4')
+            li
+              a.dropdown-item(href='./shop-product.html') Product
+            li.dropend.dropend-hover
+              a#navbarDropend-1.dropdown-item.dropdown-toggle(href='#' data-bs-toggle='dropdown' aria-expanded='false' data-bs-auto-close='outside') Listing
+              ul.dropdown-menu(aria-labelledby='navbarDropend-1')
+                li
+                  a.dropdown-item(href='./shop-listing.html') Full width
+                li
+                  a.dropdown-item(href='./shop-listing-sidebar.html') Sidebar
+            li
+              a.dropdown-item(href='./shop-cart.html') Cart
+            li
+              a.dropdown-item(href='./shop-checkout.html') Checkout
+        li.nav-item.dropdown.dropdown-hover
+          a#navbarDropdown-5.nav-link.dropdown-toggle(href='#' role='button' data-bs-toggle='dropdown' aria-expanded='false')
+            | Docs
+          ul.dropdown-menu.dropdown-menu-detailed(aria-labelledby='navbarDropdown-5')
+            li
+              a.dropdown-item(href='./docs/index.html')
+                span
+                  i.bi.bi-book
+                  |                       Get Started
+                  small Customising and building
+            li
+              a.dropdown-item(href='./docs/accordion.html')
+                span
+                  i.bi.bi-grid
+                  |                       Components
+                  small Full list of components
+        li.nav-item.d-lg-none
+          a.nav-link.text-primary(href='https://themes.getbootstrap.com/product/cube-multipurpose-template-ui-kit/') Test Test
+    // mobile user menu
+
+
+
+
+
+
+
+
+//- nav#mainNav.navbar.navbar-expand-lg.navbar-sticky.navbar-dark
+//-             .container
+//-                 a.navbar-brand(href="/")
+//-                     img(src="/img/fullogo.png" alt="Bird Dog Defense Logo")
+//-                     //- Seconday
+//-                 ul.navbar-nav.navbar-nav-secondary.order-lg-3
+//-                     li.nav-item.d-lg-none
+//-                         a.nav-link.nav-icon(href="#" role="button" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-label="Toggle navigation")
+//-                             span.bi.bi-list
+//-                     li.nav-item.d-none.d-lg-block
+//-                         a#login.btn.btn-outline-white.rounded-pill.ms-2 Login
+//-                         a.btn.btn-outline-white.rounded-pill.ms-2 Register
+//-                     //- Primary
+//-                 div#navbar.collapse.navbar-collapse(data-bs-parent="#mainNav")
+//-                     ul.navbar-nav
+//-                         li.nav-item.dropdown.dropdown-hover
+//-                             a#navbarDropdown-1.nav-link.dropdown-toggle(href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false") Landings
+
+//-                             ul.dropdown-menu.dropdown-menu-md(aria-labelledby="navbarDropdown-1")
+//-                                 li
+//-                                     a.dropdown-item Start Up
+//-                                 li
+//-                                     a.dropdown-item SaaS
+//-                                 li 
+//-                                     a.dropdown-item Coworking
+//-                             li.nav-item.dropdown.dropdown-hover
+//-                                 a#navbarDropdown-2.nav-link.dropdown-toggle(href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false") Pages
+
+//-                                 div.dropdown-menu.dropdown-menu-custom(aria-labeledby="navbarDropdown-2")
+//-                                     .row.g-0
+//-                                         .col-6
+//-                                             .p-4
+//-                                                 span.dropdown-label Company
+//-                                                 a.dropdown-item(href="#") About
+//-                                                 a.dropdown-item(href="#") Pricing
+//-                                                 a.dropdown-item(href="#") FAQ
+
+//-                                                 span.dropdown-label Portfolio
+//-                                                 a.dropdown-item(href="#") FAQ
+
+//-                                         .col-12
+//-                                             a.card.card-arrow.inverted.bg-green(href="#")
+//-                                                 .card-footer.mt-auto
+//-                                                     h4.lead.lh-3.fw-light Buy Now

@@ -1,0 +1,47 @@
+//- extends base
+
+mixin navItem(href,name)
+    li.mb-1
+        a.text-reset.text-primary-hover(href=`${href}`)= name
+        
+block content
+    footer.py-15.py-xl-20.bg-black.inverted.border-top
+        .container
+            .row.g-4.g-lg-5.mt-2.mb-10
+                .col-md-3.text-center.text-md-start
+                    a.navbar-brand(href='/')
+                        img(src="./img/fulllogo.png", alt='Bird Dog Defense Logo')
+                .col-md-4.col-lg-5.text-center.text-md-start
+                    ul.list-unstyled
+                        //- li.mb-1
+                        //-     a.text-reset.text-primary-hover(href="#") Documentation
+                        +navItem('#','TestLink1')
+                        +navItem('#','TestLink2')
+                        +navItem('#','TestLink3')
+                        +navItem('#','TestLink4')
+                    
+
+                        
+                .col-md-5.col-lg-4
+                    .grouped-inputs.border.p-1.rounded-pill
+                        .row
+                            .col
+                                input.form-control.rounded-pill.px-3(type='text' arial-label='Text input' placeholder="Your Email")
+                            .col-auto
+                                a.btn.btn-red.btn-icon.rounded-circle(href="#")
+                                    i.bi.bi-arrow-return-left
+
+            .row.align-items-center.g-1.g-lg-6.text-muted
+                .col-md-6.col-lg-5.order-lg-2.text-center.text-md-start
+                    ul.list-inline.small
+                        li.list-inline-item
+                            a.text-reset.text-primary-hover(href="#") Facebook
+                        li.list-inline-item
+                            a.text-reset.text-primary-hover(href="#") Instagram
+                        li.list-inline-item
+                            a.text-reset.text-primary-hover(href="#") TikTok
+                .col-md-6.col-lg-4.text-center.text-md-end.order-lg-3
+                    span.small New Braunfels, Texas USA
+                .col-lg-3.order-lg-1.text-center.text-md-start
+                    p.small Copyrights Bird Dog Defense &copy 2024 
+                    

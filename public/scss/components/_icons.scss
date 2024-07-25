@@ -1,0 +1,35 @@
+//
+// icons
+//
+
+.icon-box {
+  position: relative;
+  display: inline-flex;
+  width: remAdjust(56);
+  min-width: remAdjust(56);
+  height: remAdjust(56);
+  align-items: center;
+  justify-content: center;
+  font-size: remAdjust(20);
+
+  &[class*="-sm"] {
+    min-width: remAdjust(40);
+    width: remAdjust(40);
+    height: remAdjust(40);
+    font-size: $font-size-lg;
+  }
+
+  &[class*="-lg"] {
+    min-width: remAdjust(72);
+    width: remAdjust(72);
+    height: remAdjust(72);
+    font-size: remAdjust(24);
+  }
+}
+
+.bi {
+  display: inline-block;
+  width: 1em;
+  height: 1em;
+  line-height: 1em;
+}

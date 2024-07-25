@@ -1,0 +1,237 @@
+//
+// accordions
+//
+
+.accordion {
+  .accordion-item {
+    position: relative;
+    border: 0;
+    background: transparent;
+
+    &:not(:first-child) {
+      border-top: $border-width solid $border-color;
+    }
+  }
+
+  .accordion-button {
+    transition: all 0.2s;
+    position: relative;
+    background-color: transparent;
+    padding-top: remAdjust(32);
+    padding-bottom: remAdjust(32);
+    padding-right: remAdjust(40);
+    padding-left: 0;
+    box-shadow: none;
+    color: inherit;
+
+    &:not(.collapsed) {
+      color: inherit;
+    }
+
+    .row {
+      flex: 1 1 auto;
+    }
+
+    &::after {
+      position: absolute;
+      top: 50%;
+      right: 0;
+      font-family: bootstrap-icons !important;
+      font-size: $font-size-base;
+      content: "\f282";
+      color: inherit;
+      margin-top: -0.5em;
+      width: 1em;
+      height: 1em;
+      background: transparent;
+    }
+  }
+
+  .accordion-body {
+    padding: 0 remAdjust(40) remAdjust(32) 0;
+  }
+}
+
+// classic
+.accordion-classic {
+  border: $border-width solid $border-color;
+  overflow: hidden;
+
+  .accordion-button {
+    padding: remAdjust(32);
+
+    &::after {
+      right: remAdjust(32);
+    }
+  }
+
+  .accordion-body {
+    padding: 0 remAdjust(32) remAdjust(32) remAdjust(32);
+  }
+}
+
+// minimal
+.accordion-minimal {
+  .accordion-item {
+    &:not(:first-child) {
+      border-top: 0;
+      margin-top: remAdjust(24);
+    }
+  }
+
+  .accordion-button,
+  .accordion-body {
+    padding: 0 0 0 remAdjust(40);
+  }
+
+  .accordion-body {
+    padding-top: remAdjust(16);
+  }
+
+  .accordion-button::after {
+    right: auto;
+    left: 0;
+    content: "\f64d";
+  }
+
+  .accordion-button:not(.collapsed)::after {
+    transform: rotate(-135deg);
+  }
+}
+
+// steps
+.accordion-steps {
+  .accordion-item {
+    position: relative;
+    counter-increment: accordion;
+
+    &:not(:first-child) {
+      border-top: 0;
+      margin-top: remAdjust(40);
+    }
+
+    &:not(:first-child) {
+      &::before {
+        content: "";
+        position: absolute;
+        width: remAdjust(2);
+        top: remAdjust(-32);
+        left: remAdjust(30);
+        bottom: calc(50% + 40px);
+        background: $border-color;
+      }
+    }
+
+    &:not(:last-child) {
+      &::after {
+        content: "";
+        position: absolute;
+        width: remAdjust(2);
+        top: calc(50% + 40px);
+        left: remAdjust(30);
+        bottom: remAdjust(-32);
+        background: $border-color;
+      }
+    }
+  }
+
+  .accordion-button {
+    position: static;
+    min-height: remAdjust(64);
+
+    &::before {
+      transition: all 0.2s ease-in-out;
+      position: absolute;
+      top: 50%;
+      left: 0;
+      content: counter(accordion, decimal);
+      display: flex;
+      width: remAdjust(64);
+      height: remAdjust(64);
+      align-items: center;
+      justify-content: center;
+      margin-top: remAdjust(-32);
+      background: $black;
+      color: $white;
+      font-size: $font-size-lg;
+      border-radius: 50%;
+      z-index: 4;
+    }
+
+    &::after {
+      position: static;
+      margin-left: remAdjust(8);
+      margin-top: 0;
+    }
+
+    &[aria-expanded="true"] {
+      color: var(--bs-primary);
+
+      &::before {
+        background: var(--bs-primary);
+      }
+    }
+
+    &:hover {
+      color: var(--bs-primary);
+
+      &::before {
+        background: var(--bs-primary);
+      }
+    }
+  }
+
+  .accordion-button,
+  .accordion-body {
+    padding-top: 0;
+    padding-bottom: 0;
+    padding-left: remAdjust(96);
+  }
+
+  .accordion-body {
+    padding-bottom: remAdjust(16);
+  }
+}
+
+// interaction
+//
+
+// highlight
+.accordion[class*="-highlight"] {
+  &:hover {
+    .accordion-button {
+      opacity: 0.5;
+    }
+  }
+
+  .accordion-button {
+    &:hover,
+    &:not(.collapsed) {
+      opacity: 1;
+    }
+  }
+}
+
+// selection
+.accordion[class*="-select"] {
+  .accordion-item {
+    &::before {
+      @include transition;
+      content: "";
+      display: block;
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background: rgba($black, 0.04);
+      opacity: 0;
+    }
+
+    &:hover::before {
+      opacity: 1;
+      left: remAdjust(-16);
+      right: remAdjust(-16);
+    }
+  }
+}

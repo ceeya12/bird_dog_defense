@@ -1,0 +1,24 @@
+.modal-custom.hidden_all(style="border: dashed pink;")
+  button.close-modal(style="border: dashed red;") &times;
+  h5(style="border: dashed red;").d-flex.justify-content-center Log In To Your Account
+  .row.d-flex.justify-content-center(style="border: dashed green;")
+    //- Submitting from API endpoint
+    .col.d-flex.justify-content-center
+      form#formSignIn(style="border: dashed orange;")
+        // Your sign up form fields here
+        .mt-3.mb-3
+          p Enter your email address.
+        .mb-3
+          label.d-flex.justify-content-center.fw-bolder Your Email
+          input#signIn.form-control(type="email", name="email", placeholder="Email", required)
+          .form-text We'll never share your email with anyone else.
+        .mb-3
+        .mt-3.mb-3
+            label.d-flex.justify-content-center.fw-bolder Your Password
+            input#passwordSignIn.form-control(type="password", name="password", placeholder="*********", required)
+
+        button.btn.btn-secondary.d-flex.justify-content-center(type="submit") SIGN IN
+    span.d-flex.justify-content-center.mt-4(style="border: dashed red;") Don't have an account? 
+      a.text-break(href="#") Register Here
+      
+.overlay.hidden_all

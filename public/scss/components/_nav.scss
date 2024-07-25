@@ -1,0 +1,133 @@
+//
+// nav
+//
+
+.nav {
+  .nav-link {
+    position: relative;
+    color: inherit;
+  }
+}
+
+// tabs
+.nav-tabs {
+  position: relative;
+  border: 0;
+
+  .nav-item {
+    margin: 0;
+    margin-right: remAdjust(16);
+    margin-bottom: remAdjust(8);
+    margin-left: 0;
+  }
+
+  .nav-link {
+    transition: all 0.3s ease-in-out;
+    display: inline-block;
+    padding: remAdjust(8) 0;
+    border-width: 0 0 $border-width 0;
+    border-radius: 0;
+    border-color: transparent;
+    text-align: left;
+    background: transparent;
+    color: $gray-600;
+
+    &:hover {
+      color: $black;
+      border-color: transparent;
+    }
+
+    &.active {
+      color: $black;
+      border-color: $black;
+      background: transparent;
+    }
+  }
+}
+
+.nav-item {
+  .nav-label {
+    display: flex;
+    color: $black;
+  }
+
+  &:not(:first-child) {
+    .nav-label {
+      margin-top: remAdjust(12);
+    }
+  }
+}
+
+// pills
+.nav-pills {
+  display: inline-flex;
+  border: $border-width solid $border-color;
+
+  .nav-link {
+    padding: remAdjust(12) remAdjust(24);
+    color: $gray-800;
+    background: transparent;
+  }
+
+  .nav-link.active {
+    color: $black;
+    background: $border-color;
+  }
+}
+
+// minimal
+.nav-minimal {
+  display: flex;
+  flex-direction: column;
+
+  .nav-item:not(:first-child) {
+    margin-top: remAdjust(16);
+  }
+
+  .nav-link {
+    display: inline-block;
+    position: relative;
+    padding: 0 remAdjust(32) 0 0;
+
+    &[aria-expanded]::before {
+      transition: transform 0.2s;
+      position: absolute;
+      top: 50%;
+      right: 0;
+      content: "\f282";
+      width: remAdjust(24);
+      margin-top: remAdjust(-12);
+      text-align: center;
+      line-height: remAdjust(24);
+      font-family: bootstrap-icons !important;
+      font-size: remAdjust(18);
+      color: $gray-600;
+    }
+
+    &[aria-expanded="true"]::before {
+      transform: rotate(180deg);
+    }
+
+    &[class*="active"] {
+      color: $primary !important;
+    }
+
+    &:hover {
+      color: $primary !important;
+    }
+  }
+
+  // nested
+  .nav-minimal {
+    margin-top: remAdjust(8);
+    margin-bottom: remAdjust(8);
+
+    .nav-item {
+      margin-top: remAdjust(8);
+    }
+
+    .nav-link {
+      color: $secondary;
+    }
+  }
+}

@@ -1,0 +1,74 @@
+//
+// range slider
+//
+.noUi-target {
+  margin: 0 remAdjust(16);
+  border: 0;
+  border-radius: 0;
+  height: remAdjust(32);
+  box-shadow: none;
+  background: transparent;
+}
+
+.noUi-connects {
+  width: calc(100% + 32px);
+  left: remAdjust(-16);
+  right: remAdjust(-16);
+  top: remAdjust(15);
+  height: remAdjust(2);
+  background: $border-color;
+
+  .noUi-connect {
+    background: $black;
+  }
+}
+
+.noUi-horizontal {
+  .noUi-handle {
+    @include nofocus;
+    top: 0;
+    border: 0;
+    width: remAdjust(32);
+    height: remAdjust(32);
+    border-radius: 50%;
+    box-shadow: none;
+    background: $white;
+    cursor: pointer;
+
+    &::before {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      margin-top: remAdjust(-12);
+      margin-left: remAdjust(-12);
+      content: "";
+      width: remAdjust(24);
+      height: remAdjust(24);
+      display: block;
+      background: $black;
+      border-radius: 50%;
+    }
+
+    &:hover {
+      &::before {
+        background: $primary;
+      }
+    }
+
+    &::after {
+      display: none;
+    }
+  }
+}
+
+// selection value
+.range-slider-selection {
+  margin-top: remAdjust(8);
+  font-size: $font-size-sm;
+}
+
+.range-slider-value {
+  &::before {
+    content: "$";
+  }
+}
