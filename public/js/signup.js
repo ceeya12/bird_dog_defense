@@ -40,16 +40,13 @@ export const signUp = async (
 ) => {
   try {
     // ("http://127.0.0.1:3000/api/v1/users/email");
-    const res = await axios.post(
-      "https://stormy-plateau-75935-5e9b339f36f1.herokuapp.com/api/v1/users/create-user/signup",
-      {
-        name,
-        phonenumber,
-        email,
-        password,
-        passwordConfirm,
-      }
-    );
+    const res = await axios.post("/api/v1/users/create-user/signup", {
+      name,
+      phonenumber,
+      email,
+      password,
+      passwordConfirm,
+    });
     res.status(201).json({
       status: "Success",
       data: {
