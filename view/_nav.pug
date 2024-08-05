@@ -1,23 +1,21 @@
-nav#mainNav.navbar.navbar-expand-lg.navbar-sticky.navbar-dark
+nav#mainNav.navbar.navbar-expand-lg.navbar-sticky.navbar-dark.mt-5
   .container
     a.navbar-brand(href='/')
-      img(src='./img/fulllogo_320x256.png' alt='Logo')
+      img(src="/img/icononly_275X220.png" alt='Logo')
     // secondary
     ul.navbar-nav.navbar-nav-secondary.order-lg-3
       li.nav-item.d-lg-none
         a.nav-link.nav-icon(href='' role='button' data-bs-toggle='collapse' data-bs-target='#navbar' aria-controls='navbar' aria-expanded='false' aria-label='Toggle navigation')
           span.bi.bi-list
       li.nav-item.d-none.d-lg-block
-        a#emailRegister.btn.btn-outline-white.rounded-pill.ms-2(href='#') 
-          | Register
+        a#emailRegister.btn.btn-outline-white.rounded-pill.ms-2(href='#') Register
       li.nav-item.d-none.d-lg-block
         a#signIn.btn.btn-outline-white.rounded-pill.ms-2(href='#') Sign in
     // primary
     #navbar.collapse.navbar-collapse(data-bs-parent='#mainNav')
       ul.navbar-nav
         li.nav-item.dropdown.dropdown-hover
-          a#navbarDropdown-1.nav-link.dropdown-toggle(href='#' role='button' data-bs-toggle='dropdown' aria-expanded='false')
-            | Landings
+          a#navbarDropdown-1.nav-link.dropdown-toggle(href='#' role='button' data-bs-toggle='dropdown' aria-expanded='false') Landings
           ul.dropdown-menu.dropdown-menu-md(aria-labelledby='navbarDropdown-1')
             li
               a.dropdown-item(href='./startup.html') Startup

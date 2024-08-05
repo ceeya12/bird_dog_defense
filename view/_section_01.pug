@@ -1,10 +1,8 @@
-section.spacing-top
+section.mt-2
     .container-fluid
-        .row
-            .col.col_left
-               img.img-adjustment(src="/img/fulllogo.png", alt="Company logo")
-            .col.col_right
-                video.video_adjustment(autoplay='autoplay', loop='loop', muted='muted', playsinline='playsinline')
-                    source(src="/video/bdd_index_video.mp4", type="video/mp4")
-         
-    
+        .ratio.ratio-16x9
+            video( title='MP4 video' autoplay loop muted playsinline)
+                 source(src='./img/video/landing_page_vid_01.mp4' type='video/mp4')
+
+
+

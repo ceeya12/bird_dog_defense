@@ -3,40 +3,39 @@ html(lang="en")
     head
         meta(charset="UTF-8")
         meta(name="viewport", content="width=device-width, initial-scale=1.0")
-        title Bird Dog Defense | Home
+        title BirdDog Defense | Home
         //-Main CSS
         link(rel="stylesheet", type='text/css' href="../scss/style.css")
 
+    body.bg-black
 
-    body.bg-black.headroom.headroom--not-bottom.headroom--pinned.headroom--top(data-aos-easing="ease" data-aos-duration="800" data-aos-delay="0")
+        //Social Media Standalone container
+        include _social_media
+        
         //Header with Navbar
-        include _nav
-
+        include _nav.pug
+        
         //Signup Overlay
         include _register_overlay
-
         //- include _signin_overlay
+        
+        //primary content for main logo and video
+        include _section_01
 
-        section
-            //primary content for main logo and video
-            include _section_01
+        include _section_02
 
-        section
-            include _section_02
-        section
-            include _section_03
-        section
-            include _section_04
-        section
-            include _section_05
-        section
-            include _section_06
-        section
-            include _section_07
+        include _section_03
+        
+        include _section_04
+        
+        include _section_05
+        
+        include _section_06
+        
+        include _section_07
 
-        footer
-            //Footer with contact info
-            include _footer
+        //Footer with contact info
+        include _footer
 
 
 

@@ -1,12 +1,65 @@
-section.py-20.border-top.inverted
-  .container
-    .row.justify-content-center
-      .col-lg-8
-        blockquote.blockquote
-          span.lh-1.fs-1.mb-0 &quot;
-          p.fs-3.mb-4
-            span.text-red Professionalism, Quality, and Customer Satisfaction
-            |  Lorem ipsum dolor sit, amet consectetur adipisicing elit. Perferendis, quos! Ducimus ipsum dolorem voluptatum optio quae nihil libero esse, illo fugit at corrupti voluptas exercitationem distinctio vel, porro veritatis. Est.
-          footer.blockquote-footer
-            span.d-block.lh-1.text-black Valerie Doe
-            small John Smith
+section.py-20.bg-red.inverted.overflow-hidden.border-top
+  .container.foreground
+    .row.justify-content-center.mb-8
+      .col-lg-8.text-center
+        h2 SERVICES OFFERED
+    .row
+        .col.d-flex.justify-content-center
+          .text-white
+            .card(style='width: 20rem; border: 1px solid #eb4f00; border-radius: 10px; background-color: #eb4f00;')
+              .card-body
+                h6.card-title.d-flex.justify-content-center NRA Basic Pistol
+                p.card-text
+                  | An introductory course covering the basics of pistol safety, operation, and marksmanship. Ideal for new shooters.
+                a.card-link.btn.btn-light.d-flex.justify-content-center(href='#') Go Somewhere
+    .row.g-5.justify-content-center.justify-content-lg-between.align-items-center
+      .col-lg-4.order-lg-1(data-aos="fade-right")
+        ul.list-unstyled.text-center.text-lg-end.pe-lg-5
+          li
+            //- p.fs-lg.text-muted(style="border: solid 5px #eb4f00;")
+            //-   span.text-white Online LTC(Distance Learning)
+            //-   | 
+            //-   | A convenient online course covering the essentials for the Texas License to Carry (LTC). Please note that this course does not include the shooting qualification. 
+            .card(style='width: 20rem; border: 1px solid #eb4f00; border-radius: 10px; background-color: #eb4f00')
+              .card-body
+                h6.card-title Online LTC(Distance Learning)
+                p.card-text
+                  | A convenient online course covering the essentials for the Texas License to Carry (LTC). Please note that this course does not include the shooting 
+                a.card-link.btn.btn-light.d-flex.justify-content-center(href='#') Go Somewhere
+          li.mt-5
+            .card(style='width: 20rem; border: 1px solid #eb4f00; border-radius: 10px; background-color: #eb4f00;')
+              .card-body
+                h6.card-title Private Lessons
+                p.card-text
+                  | Typically one hour long, these personalized sessions focus on the fundamentals of shooting. We can accomplish a lot in just one hour!
+                a.card-link.btn.btn-light.d-flex.justify-content-center(href='#') Go Somewhere
+          
+      .col-lg-4.order-lg-3(data-aos='fade-left')
+        ul.list-unstyled.text-center.text-lg-start.ps-lg-5
+          li
+            .card(style='width: 20rem; border: 1px solid #eb4f00; border-radius: 10px; background-color: #eb4f00;')
+              .card-body
+                h6.card-title Texas LTC(Distance Learning)
+                p.card-text
+                  | Comprehensive in-person training for obtaining your Texas License to Carry, including all necessary instruction and shooting qualifications
+                a.card-link.btn.btn-light.d-flex.justify-content-center(href='#') Go Somewhere
+          li.mt-5
+            .card(style='width: 20rem; border: 1px solid #eb4f00; border-radius: 10px; background-color: #eb4f00;')
+              .card-body
+                h6.card-title NRA Basic Pistol
+                p.card-text
+                  | An introductory course covering the basics of pistol safety, operation, and marksmanship. Ideal for new shooters.
+                a.card-link.btn.btn-light.d-flex.justify-content-center(href='#') Go Somewhere
+      .col-lg-4.order-lg-2
+        .card.equal-2-1.equal-lg-1-1.overflow-visible
+          .card-wrap
+            img.img-fluid(src='/img/action_shots/_DSC8497.jpg' alt='Image' data-aos='fade-up' data-aos-delay='100')
+            img.img-fluid.mt-3(src='/img/action_shots/_DSC8219.jpg' alt='Image' data-aos='fade-up' data-aos-delay='100')
+
+
+    
+
+  //- img.position-absolute.top-100.start-50.translate-middle(src='/img/svg/pattern-lg-light.svg' alt='Image')
+
+
+
