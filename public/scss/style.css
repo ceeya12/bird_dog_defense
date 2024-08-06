@@ -41,6 +41,9 @@
     transform: translate(-50%, -50%);
     outline: solid black;
   }
+  .remove-item {
+    display: none;
+  }
 }
 .close-modal {
   position: absolute;
