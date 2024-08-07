@@ -16,4 +16,6 @@ router.get("/", viewController.getMainLayout);
 //Login User
 router.get("/login", viewController.getLogin);
 
+router.get("/about", viewController.getAbout);
+
 module.exports = router;

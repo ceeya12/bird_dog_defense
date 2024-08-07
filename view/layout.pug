@@ -3,8 +3,10 @@ html(lang="en")
     head
         meta(charset="UTF-8")
         meta(name="viewport", content="width=device-width, initial-scale=1.0")
-        title BirdDog Defense | Home
-          //-Main CSS
+
+        block title
+            title BirdDog Defense | 
+
         link(rel="stylesheet", type='text/css' href="../scss/style.css")
         //-Favicon
         link(rel='apple-touch-icon' sizes='180x180' href='/img/favicon_io/apple-touch-icon.png')
@@ -14,38 +16,22 @@ html(lang="en")
 
 
     body.bg-black
-
-        //Social Media Standalone container
+        //Social Media Bar
         include _social_media
-        
-        //Header with Navbar
+
+            // navigation bar
         include _nav.pug
-        
-        //Signup Overlay
-        include _register_overlay
-        //- include _signin_overlay
-        
-        //primary content for main logo and video
-        include _section_01
 
-        include _section_02
-
-        include _section_03
-        
-        include _section_04
-        
-        include _section_05
-        
-        include _section_06
-        
-        include _section_07
+        //Main content
+        block main
+            section
+                h3.text-white Main Part of the Page
 
         //Footer with contact info
         include _footer
 
-
-
-
     script(src='/js/bundle.js')
     //- script(src='../../utilities/email.js' type='module')
-    
+
+
+

@@ -44,6 +44,9 @@
   .remove-item {
     display: none;
   }
+  .adjust-mobile {
+    margin-top: 60%;
+  }
 }
 .close-modal {
   position: absolute;

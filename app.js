@@ -28,6 +28,7 @@ app.use(bodyParser.json());
 
 //Routes
 app.use("/", viewRouter);
+app.use("/about", viewRouter);
 app.use("/api/v1/users/create-user", userRouter);
 // app.use("/api/v1/users", userRouter);
 
